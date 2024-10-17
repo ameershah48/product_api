@@ -16,9 +16,13 @@ Follow the steps below to set up the project:
 4. **Initialize the database**  
    Run the migration command to set up the SQLite database: `php artisan migrate:fresh`
 
-5. **Try the API Endpoints**  
+5. **Generate the application key**  
+   Run the following command to generate the application key:
+   `php artisan key:generate`  
+
+6. **Try the API Endpoints**  
    Use the **Postman Collection** located in the root directory of the project to try all the available API endpoints.
 
-6. **Run tests**  
+7. **Run tests**  
    Execute the following command to run tests and verify that the endpoints are functioning correctly:
    `php artisan test`
