@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "567581c0-7738-45d2-bf41-606fdb9c60f3",
+		"_postman_id": "ce41be9e-f29c-4481-8bd6-e493f6960cf0",
 		"name": "Product API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "11277418"
@@ -13,7 +13,13 @@
 					"name": "Create Product",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "urlencoded",
 							"urlencoded": [
@@ -136,7 +142,13 @@
 					"name": "List Products",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "http://product_api.test/api/products",
 							"protocol": "http",
@@ -227,9 +239,15 @@
 					"name": "Show Product",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "http://product_api.test/api/products/1",
+							"raw": "http://product_api.test/api/products/2",
 							"protocol": "http",
 							"host": [
 								"product_api",
@@ -238,7 +256,7 @@
 							"path": [
 								"api",
 								"products",
-								"1"
+								"2"
 							]
 						}
 					},
@@ -319,7 +337,13 @@
 					"name": "Update Product",
 					"request": {
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "urlencoded",
 							"urlencoded": [
@@ -452,7 +476,13 @@
 					"name": "Delete Product",
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "http://product_api.test/api/products/1",
 							"protocol": "http",
@@ -550,7 +580,13 @@
 					"name": "Register",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "urlencoded",
 							"urlencoded": [
@@ -685,7 +721,13 @@
 					"name": "Login",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "urlencoded",
 							"urlencoded": [
