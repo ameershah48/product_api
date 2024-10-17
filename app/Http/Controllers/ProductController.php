@@ -19,6 +19,14 @@ class ProductController extends Controller
     }
 
     /**
+     * Display the specified resource.
+     */
+    public function show(Product $product)
+    {
+        return response()->json($product, 200);
+    }
+
+    /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)

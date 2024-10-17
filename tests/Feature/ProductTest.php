@@ -7,16 +7,6 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 uses(RefreshDatabase::class);
 
-test('it can list all products', function () {
-    Sanctum::actingAs(User::factory()->create());
-    Product::factory()->count(3)->create();
-
-    $response = $this->getJson(route('products.index'));
-
-    $response->assertStatus(200)
-        ->assertJsonCount(3);
-});
-
 test('it can create a new product', function () {
     Sanctum::actingAs(User::factory()->create());
 
@@ -36,6 +26,27 @@ test('it can create a new product', function () {
         ]);
 
     $this->assertDatabaseHas('products', $product);
+});
+
+test('it can list all products', function () {
+    Sanctum::actingAs(User::factory()->create());
+    Product::factory()->count(3)->create();
+
+    $response = $this->getJson(route('products.index'));
+
+    $response->assertStatus(200)
+        ->assertJsonCount(3);
+});
+
+test('it can show a product', function () {
+    Sanctum::actingAs(User::factory()->create());
+
+    $product = Product::factory()->create();
+
+    $response = $this->getJson(route('products.show', ['product' => $product]));
+
+    $response->assertStatus(200)
+        ->assertJson($product->toArray());
 });
 
 test('it can update a product', function () {
