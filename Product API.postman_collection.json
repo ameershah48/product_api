@@ -224,6 +224,98 @@
 					]
 				},
 				{
+					"name": "Show Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://product_api.test/api/products/1",
+							"protocol": "http",
+							"host": [
+								"product_api",
+								"test"
+							],
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://product_api.test/api/products",
+									"protocol": "http",
+									"host": [
+										"product_api",
+										"test"
+									],
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Oct 2024 04:08:42 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"test\",\n        \"description\": \"test products\",\n        \"price\": 100,\n        \"created_at\": \"2024-10-17T04:08:35.000000Z\",\n        \"updated_at\": \"2024-10-17T04:08:35.000000Z\"\n    }\n]"
+						}
+					]
+				},
+				{
 					"name": "Update Product",
 					"request": {
 						"method": "PUT",
@@ -599,7 +691,7 @@
 							"urlencoded": [
 								{
 									"key": "email",
-									"value": "user2@email.test",
+									"value": "user@email.test",
 									"type": "text"
 								},
 								{
